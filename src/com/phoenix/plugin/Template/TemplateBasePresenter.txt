@@ -1,0 +1,33 @@
+package $basePackageName.base;
+
+import io.reactivex.disposables.CompositeDisposable;
+import io.reactivex.disposables.Disposable;
+
+/**
+ * @author $author
+ * @date $date
+ */
+public abstract class BasePresenter<V extends BaseView> {
+    protected V view;
+    private CompositeDisposable compositeDisposable;
+
+    public BasePresenter(V v) {
+        compositeDisposable = new CompositeDisposable();
+        attachView(v);
+    }
+
+    public void attachView(V v) {
+        this.view = v;
+    }
+
+    public void detach() {
+        if (compositeDisposable != null) {
+            compositeDisposable.clear();
+            compositeDisposable = null;
+        }
+    }
+
+    public void addDisposable(Disposable d) {
+        compositeDisposable.add(d);
+    }
+}

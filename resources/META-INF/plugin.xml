@@ -1,0 +1,37 @@
+<idea-plugin>
+  <id>com.phoenix.plugin.mvp</id>
+  <name>MVPGenerator</name>
+  <version>1.0</version>
+  <vendor email="goujianhua@outlook.com">Contact Me</vendor>
+
+  <description><![CDATA[
+     生成MVP代码的Android Studio插件.<br>
+    ]]></description>
+
+  <change-notes><![CDATA[
+      1.0.0<br>
+    ]]>
+  </change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="173.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+    <action id="PhoenixMVP" class="com.phoenix.plugin.MVPGenerator" text="MVPGenerator"
+            description="MVP Generator Helper">
+      <add-to-group group-id="ProjectViewPopupMenu" anchor="last"/>
+    </action>
+  </actions>
+
+</idea-plugin>

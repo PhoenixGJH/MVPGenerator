@@ -1,0 +1,13 @@
+package $basePackageName.base;
+
+import android.support.annotation.StringRes;
+
+/**
+ * @author $author
+ * @date $date
+ */
+public interface BaseView {
+    void toast(CharSequence text);
+
+    void toast(@StringRes int resId);
+}

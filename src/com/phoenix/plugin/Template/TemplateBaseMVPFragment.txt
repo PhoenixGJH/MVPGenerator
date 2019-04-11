@@ -1,0 +1,28 @@
+package $basePackageName.base;
+
+import android.os.Bundle;
+import android.support.annotation.Nullable;
+
+/**
+ * @author $author
+ * @date $date
+ */
+public abstract class BaseMVPFragment<P extends BasePresenter> extends BaseFragment {
+    protected P presenter;
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        presenter = initPresenter();
+    }
+
+    protected abstract P initPresenter();
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        if (presenter != null) {
+            presenter.detach();
+        }
+    }
+}

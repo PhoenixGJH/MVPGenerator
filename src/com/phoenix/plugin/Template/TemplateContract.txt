@@ -1,0 +1,17 @@
+package $packageName.contracts;
+
+import $basePackageName.base.BaseView;
+
+/**
+ * @author $author
+ * @date $date
+ */
+public interface $nameContract {
+    interface View extends BaseView {
+
+    }
+
+    interface Presenter {
+
+    }
+}

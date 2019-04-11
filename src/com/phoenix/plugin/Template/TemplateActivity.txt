@@ -1,0 +1,27 @@
+package $packageName.views.activities;
+
+import $basePackageName.base.BaseMVPActivity;
+import $packageName.R;
+import $packageName.contracts.$nameContract;
+import $packageName.presenters.$namePresenter;
+
+/**
+ * @author $author
+ * @date $date
+ */
+public class $nameActivity extends BaseMVPActivity<$namePresenter> implements $nameContract.View {
+    @Override
+    protected $namePresenter initPresenter() {
+        return new $namePresenter(this);
+    }
+
+    @Override
+    protected int getContentId() {
+        return R.layout.activity_$name;
+    }
+
+    @Override
+    protected void init() {
+
+    }
+}

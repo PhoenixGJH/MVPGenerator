@@ -1,0 +1,9 @@
+package $packageName.models.dao;
+
+/**
+ * @author $author
+ * @date $date
+ */
+public class $nameData {
+
+}

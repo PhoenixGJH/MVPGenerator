@@ -1,0 +1,56 @@
+package $basePackageName.base;
+
+import android.os.Bundle;
+import android.support.annotation.LayoutRes;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.support.annotation.StringRes;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Toast;
+
+/**
+ * @author $author
+ * @date $date
+ */
+public abstract class BaseFragment extends Fragment implements BaseView {
+
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        return inflater.inflate(getContentId(), container, false);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        init(view);
+    }
+
+    protected abstract void init(View view);
+
+    protected abstract @LayoutRes
+    int getContentId();
+
+    @Override
+    public void toast(@StringRes int resId) {
+        FragmentActivity activity = getActivity();
+        if (activity != null) {
+            Toast.makeText(activity, resId, Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    @Override
+    public void toast(CharSequence text) {
+        if (text == null) {
+            return;
+        }
+        FragmentActivity activity = getActivity();
+        if (activity != null) {
+            Toast.makeText(activity, text, Toast.LENGTH_SHORT).show();
+        }
+    }
+}
