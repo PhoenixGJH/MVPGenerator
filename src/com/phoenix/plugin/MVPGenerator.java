@@ -11,7 +11,19 @@ import com.intellij.openapi.actionSystem.CommonDataKeys;
 import com.intellij.openapi.actionSystem.PlatformDataKeys;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.Messages;
+import com.intellij.openapi.vfs.LocalFileSystem;
 import com.intellij.openapi.vfs.VirtualFile;
+import com.intellij.psi.PsiElement;
+import com.intellij.psi.PsiManager;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.plugins.groovy.lang.psi.GroovyElementVisitor;
+import org.jetbrains.plugins.groovy.lang.psi.GroovyFile;
+import org.jetbrains.plugins.groovy.lang.psi.GroovyPsiElementFactory;
+import org.jetbrains.plugins.groovy.lang.psi.api.statements.blocks.GrClosableBlock;
+import org.jetbrains.plugins.groovy.lang.psi.api.statements.expressions.GrApplicationStatement;
+import org.jetbrains.plugins.groovy.lang.psi.api.statements.expressions.GrExpression;
+import org.jetbrains.plugins.groovy.lang.psi.api.statements.expressions.path.GrMethodCallExpression;
+import org.jetbrains.plugins.groovy.lang.psi.impl.GroovyPsiElementFactoryImpl;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -62,7 +74,7 @@ public class MVPGenerator extends AnAction {
         getCurrentPath(e);
         getModuleName();
         packageName = getPackageName();
-        initDialog();
+        initDialog(e);
         refreshProject(e);
     }
 
@@ -87,7 +99,7 @@ public class MVPGenerator extends AnAction {
     /**
      * 初始化Dialog
      */
-    private void initDialog() {
+    private void initDialog(AnActionEvent e) {
         dialog = new GeneratorDialog((author1, className1, isFragment1, isGenerateBase1, baseName1) -> {
             this.author = author1;
             this.className = className1;
@@ -97,7 +109,10 @@ public class MVPGenerator extends AnAction {
             PropertiesComponent.getInstance().setValue(KEY_BASE_NAME, baseName1);
             basePackageName = getAppPackageName();
             createClassFiles();
+//            findGradleFile();
+            dialog.setVisible(false);
             Messages.showInfoMessage(project, "Create MVP success", "Title");
+//            rebuildAction(e);
         });
 
         dialog.pack();
@@ -436,12 +451,48 @@ public class MVPGenerator extends AnAction {
 
     private String[] rebuildSelections = {"Rebuild", "Cancel"};
 
+
+    /**
+     * 找到build.gradle文件
+     */
+    private void findGradleFile() {
+//        String gradlePath = currentPath + "/build.gradle";
+        String gradlePath = project.getBasePath() + "/build.gradle";
+        VirtualFile file = LocalFileSystem.getInstance().findFileByPath(gradlePath);
+        if (file == null) {
+            return;
+        }
+
+        GroovyPsiElementFactoryImpl factory = new GroovyPsiElementFactoryImpl(project, PsiManager.getInstance(project));
+//        GroovyPsiElementFactory factory = GroovyPsiElementFactoryImpl.getInstance(project);
+//        GroovyPsiElementFactory factory = GroovyPsiElementFactory.getInstance(project);
+        String rxJava = "implementation 'io.reactivex.rxjava2:rxjava:2.2.6'";
+        String rxAndroid = "implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'";
+        GrExpression expressionRxJava = factory.createExpressionFromText(rxJava);
+        GrExpression expressionRxAndroid = factory.createExpressionFromText(rxAndroid);
+
+        GroovyFile groovyFile = (GroovyFile) PsiManager.getInstance(project).findFile(file);
+        groovyFile.accept(new GroovyElementVisitor() {
+            @Override
+            public void visitMethodCallExpression(@NotNull GrMethodCallExpression methodCallExpression) {
+                super.visitMethodCallExpression(methodCallExpression);
+                if (methodCallExpression.getInvokedExpression().getText().equals("dependencies")) {
+                    GrClosableBlock[] closureArguments = methodCallExpression.getClosureArguments();
+                    GrClosableBlock closureArgument = closureArguments[0];
+                    PsiElement psiElement = closureArgument.addBefore(expressionRxJava, closureArgument.getRBrace());
+                    closureArgument.addBefore(expressionRxAndroid, closureArgument.getRBrace());
+                    ((GrApplicationStatement) psiElement).navigate(true);
+                }
+            }
+        });
+    }
+
     /**
      * 是否ReBuild对话框
      */
     private void rebuildAction(AnActionEvent e) {
         int selectResult = JOptionPane.showOptionDialog(null,
-                "Do you want to rebuild this project?",
+                "Create MVP success!\nDo you want to rebuild this project?",
                 "MVPGenerator Plugin",
                 JOptionPane.YES_NO_OPTION,
                 JOptionPane.QUESTION_MESSAGE,
