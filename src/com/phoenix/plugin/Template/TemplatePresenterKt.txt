@@ -1,0 +1,12 @@
+package $packageName.presenters;
+
+import $basePackageName.base.BasePresenter;
+import $packageName.contracts.$nameContract;
+
+/**
+ * @author $author
+ * @date $date
+ */
+class $namePresenter(view: $nameContract.View) : BasePresenter<$nameContract.View>(view), $nameContract.Presenter {
+
+}

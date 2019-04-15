@@ -1,6 +1,5 @@
 package com.phoenix.plugin;
 
-import com.intellij.compiler.actions.CompileProjectAction;
 import com.intellij.ide.util.PropertiesComponent;
 import com.intellij.notification.NotificationDisplayType;
 import com.intellij.notification.NotificationGroup;
@@ -17,7 +16,6 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import javax.swing.*;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.*;
@@ -39,6 +37,7 @@ public class MVPGenerator extends AnAction {
     private String currentPath;
     private boolean isFragment;
     private boolean isGenerateBase;
+    private boolean isKotlin;
     private GeneratorDialog dialog;
     private String moduleName;
 
@@ -88,15 +87,17 @@ public class MVPGenerator extends AnAction {
      * 初始化Dialog
      */
     private void initDialog() {
-        dialog = new GeneratorDialog((author1, className1, isFragment1, isGenerateBase1, baseName1) -> {
-            this.author = author1;
-            this.className = className1;
-            this.isFragment = isFragment1;
-            this.isGenerateBase = isGenerateBase1;
-            this.baseName = baseName1;
-            PropertiesComponent.getInstance().setValue(KEY_BASE_NAME, baseName1);
+        dialog = new GeneratorDialog(params -> {
+            this.author = params.getAuthor();
+            this.className = params.getClassName();
+            this.isFragment = params.isFragment();
+            this.isGenerateBase = params.isGenerateBase();
+            this.baseName = params.getBaseName();
+            this.isKotlin = params.isKotlin();
+            PropertiesComponent.getInstance().setValue(KEY_BASE_NAME, baseName);
             basePackageName = getAppPackageName();
             createClassFiles();
+            dialog.setVisible(false);
             Messages.showInfoMessage(project, "Create MVP success", "Title");
         });
 
@@ -140,50 +141,104 @@ public class MVPGenerator extends AnAction {
         String basePath = getAppPath() + "base/";
         switch (codeType) {
             case BaseView:
-                if (!new File(basePath + "BaseView.java").exists()) {
-                    fileName = "TemplateBaseView.txt";
-                    content = readTemplateFile(fileName);
-                    content = dealTemplateContent(content);
-                    writeToFile(content, basePath, "BaseView.java");
+                if (isKotlin) {
+                    if (!new File(basePath + "BaseView.kt").exists()) {
+                        fileName = "TemplateBaseViewKt.txt";
+                        content = readTemplateFile(fileName);
+                        content = dealTemplateContent(content);
+                        writeToFile(content, basePath, "BaseView.kt");
+                    }
+                } else {
+                    if (!new File(basePath + "BaseView.java").exists()) {
+                        fileName = "TemplateBaseView.txt";
+                        content = readTemplateFile(fileName);
+                        content = dealTemplateContent(content);
+                        writeToFile(content, basePath, "BaseView.java");
+                    }
                 }
                 break;
             case BasePresenter:
-                if (!new File(basePath + "BasePresenter.java").exists()) {
-                    fileName = "TemplateBasePresenter.txt";
-                    content = readTemplateFile(fileName);
-                    content = dealTemplateContent(content);
-                    writeToFile(content, basePath, "BasePresenter.java");
+                if (isKotlin) {
+                    if (!new File(basePath + "BasePresenter.kt").exists()) {
+                        fileName = "TemplateBasePresenterKt.txt";
+                        content = readTemplateFile(fileName);
+                        content = dealTemplateContent(content);
+                        writeToFile(content, basePath, "BasePresenter.kt");
+                    }
+                } else {
+                    if (!new File(basePath + "BasePresenter.java").exists()) {
+                        fileName = "TemplateBasePresenter.txt";
+                        content = readTemplateFile(fileName);
+                        content = dealTemplateContent(content);
+                        writeToFile(content, basePath, "BasePresenter.java");
+                    }
                 }
                 break;
             case BaseActivity:
-                if (!new File(basePath + "BaseActivity.java").exists()) {
-                    fileName = "TemplateBaseActivity.txt";
-                    content = readTemplateFile(fileName);
-                    content = dealTemplateContent(content);
-                    writeToFile(content, basePath, "BaseActivity.java");
+                if (isKotlin) {
+                    if (!new File(basePath + "BaseActivity.kt").exists()) {
+                        fileName = "TemplateBaseActivityKt.txt";
+                        content = readTemplateFile(fileName);
+                        content = dealTemplateContent(content);
+                        writeToFile(content, basePath, "BaseActivity.kt");
+                    }
+                } else {
+                    if (!new File(basePath + "BaseActivity.java").exists()) {
+                        fileName = "TemplateBaseActivity.txt";
+                        content = readTemplateFile(fileName);
+                        content = dealTemplateContent(content);
+                        writeToFile(content, basePath, "BaseActivity.java");
+                    }
                 }
                 break;
             case BaseMVPActivity:
-                if (!new File(basePath + "BaseMVPActivity.java").exists()) {
-                    fileName = "TemplateBaseMVPActivity.txt";
-                    content = readTemplateFile(fileName);
-                    content = dealTemplateContent(content);
-                    writeToFile(content, basePath, "BaseMVPActivity.java");
+                if (isKotlin) {
+                    if (!new File(basePath + "BaseMVPActivity.kt").exists()) {
+                        fileName = "TemplateBaseMVPActivityKt.txt";
+                        content = readTemplateFile(fileName);
+                        content = dealTemplateContent(content);
+                        writeToFile(content, basePath, "BaseMVPActivity.kt");
+                    }
+                } else {
+                    if (!new File(basePath + "BaseMVPActivity.java").exists()) {
+                        fileName = "TemplateBaseMVPActivity.txt";
+                        content = readTemplateFile(fileName);
+                        content = dealTemplateContent(content);
+                        writeToFile(content, basePath, "BaseMVPActivity.java");
+                    }
                 }
                 break;
             case BaseFragment:
-                if (!new File(basePath + "BaseFragment.java").exists()) {
-                    fileName = "TemplateBaseFragment.txt";
-                    content = readTemplateFile(fileName);
-                    content = dealTemplateContent(content);
-                    writeToFile(content, basePath, "BaseFragment.java");
+                if (isKotlin) {
+                    if (!new File(basePath + "BaseFragment.kt").exists()) {
+                        fileName = "TemplateBaseFragmentKt.txt";
+                        content = readTemplateFile(fileName);
+                        content = dealTemplateContent(content);
+                        writeToFile(content, basePath, "BaseFragment.kt");
+                    }
+                } else {
+                    if (!new File(basePath + "BaseFragment.java").exists()) {
+                        fileName = "TemplateBaseFragment.txt";
+                        content = readTemplateFile(fileName);
+                        content = dealTemplateContent(content);
+                        writeToFile(content, basePath, "BaseFragment.java");
+                    }
                 }
             case BaseMVPFragment:
-                if (!new File(basePath + "BaseMVPFragment.java").exists()) {
-                    fileName = "TemplateBaseMVPFragment.txt";
-                    content = readTemplateFile(fileName);
-                    content = dealTemplateContent(content);
-                    writeToFile(content, basePath, "BaseMVPFragment.java");
+                if (isKotlin) {
+                    if (!new File(basePath + "BaseMVPFragment.kt").exists()) {
+                        fileName = "TemplateBaseMVPFragmentKt.txt";
+                        content = readTemplateFile(fileName);
+                        content = dealTemplateContent(content);
+                        writeToFile(content, basePath, "BaseMVPFragment.kt");
+                    }
+                } else {
+                    if (!new File(basePath + "BaseMVPFragment.java").exists()) {
+                        fileName = "TemplateBaseMVPFragment.txt";
+                        content = readTemplateFile(fileName);
+                        content = dealTemplateContent(content);
+                        writeToFile(content, basePath, "BaseMVPFragment.java");
+                    }
                 }
                 break;
         }
@@ -194,51 +249,105 @@ public class MVPGenerator extends AnAction {
         String content;
         switch (codeType) {
             case Bean:
-                if (!new File(currentPath + "/models/bean/" + className + "Bean.java").exists()) {
-                    fileName = "TemplateBean.txt";
-                    content = readTemplateFile(fileName);
-                    content = dealTemplateContent(content);
-                    writeToFile(content, currentPath + "/models/bean", className + "Bean.java");
+                if (isKotlin) {
+                    if (!new File(currentPath + "/models/bean/" + className + "Bean.kt").exists()) {
+                        fileName = "TemplateBeanKt.txt";
+                        content = readTemplateFile(fileName);
+                        content = dealTemplateContent(content);
+                        writeToFile(content, currentPath + "/models/bean", className + "Bean.kt");
+                    }
+                } else {
+                    if (!new File(currentPath + "/models/bean/" + className + "Bean.java").exists()) {
+                        fileName = "TemplateBean.txt";
+                        content = readTemplateFile(fileName);
+                        content = dealTemplateContent(content);
+                        writeToFile(content, currentPath + "/models/bean", className + "Bean.java");
+                    }
                 }
                 break;
             case Dao:
-                if (!new File(currentPath + "/models/dao/" + className + "Data.java").exists()) {
-                    fileName = "TemplateDao.txt";
-                    content = readTemplateFile(fileName);
-                    content = dealTemplateContent(content);
-                    writeToFile(content, currentPath + "/models/dao", className + "Data.java");
+                if (isKotlin) {
+                    if (!new File(currentPath + "/models/dao/" + className + "Data.kt").exists()) {
+                        fileName = "TemplateDaoKt.txt";
+                        content = readTemplateFile(fileName);
+                        content = dealTemplateContent(content);
+                        writeToFile(content, currentPath + "/models/dao", className + "Data.kt");
+                    }
+                } else {
+                    if (!new File(currentPath + "/models/dao/" + className + "Data.java").exists()) {
+                        fileName = "TemplateDao.txt";
+                        content = readTemplateFile(fileName);
+                        content = dealTemplateContent(content);
+                        writeToFile(content, currentPath + "/models/dao", className + "Data.java");
+                    }
                 }
                 break;
             case Activity:
-                if (!new File(currentPath + "/views/activities/" + className + "Activity.java").exists()) {
-                    fileName = "TemplateActivity.txt";
-                    content = readTemplateFile(fileName);
-                    content = dealTemplateContent(content);
-                    writeToFile(content, currentPath + "/views/activities", className + "Activity.java");
+                if (isKotlin) {
+                    if (!new File(currentPath + "/views/activities/" + className + "Activity.kt").exists()) {
+                        fileName = "TemplateActivityKt.txt";
+                        content = readTemplateFile(fileName);
+                        content = dealTemplateContent(content);
+                        writeToFile(content, currentPath + "/views/activities", className + "Activity.kt");
+                    }
+                } else {
+                    if (!new File(currentPath + "/views/activities/" + className + "Activity.java").exists()) {
+                        fileName = "TemplateActivity.txt";
+                        content = readTemplateFile(fileName);
+                        content = dealTemplateContent(content);
+                        writeToFile(content, currentPath + "/views/activities", className + "Activity.java");
+                    }
                 }
                 break;
             case Fragment:
-                if (!new File(currentPath + "/views/fragments/" + className + "Fragment.java").exists()) {
-                    fileName = "TemplateFragment.txt";
-                    content = readTemplateFile(fileName);
-                    content = dealTemplateContent(content);
-                    writeToFile(content, currentPath + "/views/fragments", className + "Fragment.java");
+                if (isKotlin) {
+                    if (!new File(currentPath + "/views/fragments/" + className + "Fragment.kt").exists()) {
+                        fileName = "TemplateFragmentKt.txt";
+                        content = readTemplateFile(fileName);
+                        content = dealTemplateContent(content);
+                        writeToFile(content, currentPath + "/views/fragments", className + "Fragment.kt");
+                    }
+                } else {
+                    if (!new File(currentPath + "/views/fragments/" + className + "Fragment.java").exists()) {
+                        fileName = "TemplateFragment.txt";
+                        content = readTemplateFile(fileName);
+                        content = dealTemplateContent(content);
+                        writeToFile(content, currentPath + "/views/fragments", className + "Fragment.java");
+                    }
                 }
                 break;
             case Contract:
-                if (!new File(currentPath + "/contracts/" + className + "Contract.java").exists()) {
-                    fileName = "TemplateContract.txt";
-                    content = readTemplateFile(fileName);
-                    content = dealTemplateContent(content);
-                    writeToFile(content, currentPath + "/contracts", className + "Contract.java");
+                if (isKotlin) {
+                    if (!new File(currentPath + "/contracts/" + className + "Contract.kt").exists()) {
+                        fileName = "TemplateContractKt.txt";
+                        content = readTemplateFile(fileName);
+                        content = dealTemplateContent(content);
+                        writeToFile(content, currentPath + "/contracts", className + "Contract.kt");
+                    }
+                } else {
+                    if (!new File(currentPath + "/contracts/" + className + "Contract.java").exists()) {
+                        fileName = "TemplateContract.txt";
+                        content = readTemplateFile(fileName);
+                        content = dealTemplateContent(content);
+                        writeToFile(content, currentPath + "/contracts", className + "Contract.java");
+                    }
                 }
                 break;
             case Presenter:
-                if (!new File(currentPath + "/presenters/" + className + "Presenter.java").exists()) {
-                    fileName = "TemplatePresenter.txt";
-                    content = readTemplateFile(fileName);
-                    content = dealTemplateContent(content);
-                    writeToFile(content, currentPath + "/presenters", className + "Presenter.java");
+                if (isKotlin) {
+                    if (!new File(currentPath + "/presenters/" + className + "Presenter.kt").exists()) {
+                        fileName = "TemplatePresenterKt.txt";
+                        content = readTemplateFile(fileName);
+                        content = dealTemplateContent(content);
+                        writeToFile(content, currentPath + "/presenters", className + "Presenter.kt");
+                    }
+                } else {
+                    if (!new File(currentPath + "/presenters/" + className + "Presenter.java").exists()) {
+                        fileName = "TemplatePresenter.txt";
+                        content = readTemplateFile(fileName);
+                        content = dealTemplateContent(content);
+                        writeToFile(content, currentPath + "/presenters", className + "Presenter.java");
+                    }
                 }
                 break;
             case Layout:
@@ -432,31 +541,5 @@ public class MVPGenerator extends AnAction {
                 NotificationType.INFORMATION
                 , null)
                 .notify(project);
-    }
-
-    private String[] rebuildSelections = {"Rebuild", "Cancel"};
-
-    /**
-     * 是否ReBuild对话框
-     */
-    private void rebuildAction(AnActionEvent e) {
-        int selectResult = JOptionPane.showOptionDialog(null,
-                "Do you want to rebuild this project?",
-                "MVPGenerator Plugin",
-                JOptionPane.YES_NO_OPTION,
-                JOptionPane.QUESTION_MESSAGE,
-                null,
-                rebuildSelections,
-                null);
-        if (selectResult == JOptionPane.YES_OPTION) {
-            rebuild(e);
-        }
-    }
-
-    /**
-     * 对项目进行ReBuild
-     */
-    private void rebuild(AnActionEvent e) {
-        new CompileProjectAction().actionPerformed(e);
     }
 }

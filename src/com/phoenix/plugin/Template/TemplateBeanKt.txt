@@ -1,0 +1,9 @@
+package $packageName.models.bean;
+
+/**
+ * @author $author
+ * @date $date
+ */
+class $nameBean {
+
+}

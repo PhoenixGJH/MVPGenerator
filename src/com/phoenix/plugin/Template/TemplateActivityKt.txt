@@ -1,0 +1,23 @@
+package $packageName.views.activities
+
+import $packageName.R
+import $basePackageName.base.BaseMVPActivity
+import $packageName.contracts.$nameContract
+import $packageName.presenters.$namePresenter
+
+/**
+ * @date 2019/2/26
+ */
+class $nameActivity : BaseMVPActivity<$namePresenter>(), $nameContract.View {
+    override fun initPresenter(): $namePresenter {
+        return $namePresenter(this)
+    }
+
+    override fun getContentId(): Int {
+        return R.layout.activity_$name
+    }
+
+    override fun init() {
+
+    }
+}

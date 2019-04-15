@@ -1,0 +1,648 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/com/phoenix/plugin/MVPGenerator.java" line="397" />
+    <bookmark url="file://$PROJECT_DIR$/src/com/phoenix/plugin/MVPGenerator.java" line="265" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8f4b0152-3d7d-482f-991d-6062bbed645a" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="testRunner" value="GRADLE" />
+    <option name="delegatedBuild" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/META-INF/plugin.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/phoenix/plugin/MVPGenerator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="558">
+              <caret line="31" column="40" lean-forward="true" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2453#2454#0" expanded="true" />
+                <element signature="e#2510#2511#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/phoenix/plugin/GeneratorDialog.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1207">
+              <caret line="78" column="45" selection-start-line="78" selection-start-column="45" selection-end-line="78" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/phoenix/plugin/Template/TemplateBaseActivity.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/phoenix/plugin/GeneratorDialog.form">
+          <provider selected="true" editor-type-id="ui-designer" />
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>className</find>
+      <find>packageName</find>
+      <find>contentPane</find>
+      <find>buttonOK</find>
+      <find>baseName</find>
+      <find>basePackageName</find>
+      <find>getInstance</find>
+      <find>KEY_BASE_NAME</find>
+      <find>mfyk</find>
+      <find>findDescendantOfType</find>
+      <find>GrMethodCallExpression</find>
+      <find>rebuildSelections</find>
+      <find>build.gradle</find>
+      <find>isGenerateBaseCheckBox</find>
+      <find>CountDown</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>$name</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="dev_1.0.1" />
+      </map>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/LICENSE" />
+        <option value="$PROJECT_DIR$/LICENSE_CN" />
+        <option value="$PROJECT_DIR$/LICENSE_Apache" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/com/phoenix/plugin/Template/TemplateBaseView.txt" />
+        <option value="$PROJECT_DIR$/src/com/phoenix/plugin/Template/TemplateBasePresenter.txt" />
+        <option value="$PROJECT_DIR$/src/com/phoenix/plugin/Template/BaseActivity.txt" />
+        <option value="$PROJECT_DIR$/src/com/phoenix/plugin/Template/TemplateBaseMVPActivity.txt" />
+        <option value="$PROJECT_DIR$/src/com/phoenix/plugin/Template/TemplateBaseMVPFragment.txt" />
+        <option value="$PROJECT_DIR$/src/com/phoenix/plugin/Template/TemplateContract.txt" />
+        <option value="$PROJECT_DIR$/src/com/phoenix/plugin/Template/TemplatePresenter.txt" />
+        <option value="$PROJECT_DIR$/src/com/phoenix/plugin/Template/TemplateActivity.txt" />
+        <option value="$PROJECT_DIR$/src/com/phoenix/plugin/utils/TextUtils.java" />
+        <option value="$PROJECT_DIR$/src/com/phoenix/plugin/Template/TemplateBaseFragment.txt" />
+        <option value="$PROJECT_DIR$/src/com/phoenix/plugin/Template/TemplateFragment.txt" />
+        <option value="$PROJECT_DIR$/src/com/phoenix/plugin/AddDependencies.java" />
+        <option value="$PROJECT_DIR$/resources/META-INF/plugin.xml" />
+        <option value="$PROJECT_DIR$/src/com/phoenix/plugin/bean/DialogParams.java" />
+        <option value="$PROJECT_DIR$/src/com/phoenix/plugin/Template/TemplateBaseViewKt.txt" />
+        <option value="$PROJECT_DIR$/src/com/phoenix/plugin/Template/TemplateBasePresenterKt.txt" />
+        <option value="$PROJECT_DIR$/src/com/phoenix/plugin/Template/TemplateBaseMVPActivityKt.kt" />
+        <option value="$PROJECT_DIR$/src/com/phoenix/plugin/Template/TemplateBaseMVPActivityKt.txt" />
+        <option value="$PROJECT_DIR$/src/com/phoenix/plugin/Template/TemplateBaseMVPFragmentKt.txt" />
+        <option value="$PROJECT_DIR$/src/com/phoenix/plugin/Template/TemplateBeanKt.txt" />
+        <option value="$PROJECT_DIR$/src/com/phoenix/plugin/Template/TemplateDaoKt.txt" />
+        <option value="$PROJECT_DIR$/src/com/phoenix/plugin/Template/TemplateActivityKt.txt" />
+        <option value="$PROJECT_DIR$/src/com/phoenix/plugin/Template/TemplateFragmentKt.txt" />
+        <option value="$PROJECT_DIR$/src/com/phoenix/plugin/Template/TemplateContractKt.txt" />
+        <option value="$PROJECT_DIR$/src/com/phoenix/plugin/Template/TemplatePresenterKt.txt" />
+        <option value="$PROJECT_DIR$/src/com/phoenix/plugin/GeneratorDialog.form" />
+        <option value="$PROJECT_DIR$/src/com/phoenix/plugin/GeneratorDialog.java" />
+        <option value="$PROJECT_DIR$/src/com/phoenix/plugin/Template/TemplateBaseActivity.txt" />
+        <option value="$PROJECT_DIR$/src/com/phoenix/plugin/Template/TemplateBaseActivityKt.txt" />
+        <option value="$PROJECT_DIR$/src/com/phoenix/plugin/Template/TemplateBaseFragmentKt.txt" />
+        <option value="$PROJECT_DIR$/src/com/phoenix/plugin/MVPGenerator.java" />
+      </list>
+    </option>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1066" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="MVPGenerator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MVPGenerator" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MVPGenerator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MVPGenerator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MVPGenerator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MVPGenerator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="plugin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MVPGenerator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MVPGenerator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="plugin" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555058302741" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../MVPGeneratorTmp" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\test\plugin\MVPGenerator\libs" />
+      <recent name="F:\test\plugin\MVPGenerator\src\com\phoenix\plugin\Template" />
+      <recent name="F:\test\plugin\MVPGenerator" />
+      <recent name="F:\test\plugin\MVPGenerator\src" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Plugin" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
+      <module name="MVPGenerator" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file enabled="true" id="idea.log" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
+      <module name="MVPGenerator" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file enabled="true" id="idea.log" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8f4b0152-3d7d-482f-991d-6062bbed645a" name="Default Changelist" comment="" />
+      <created>1554873118128</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1554873118128</updated>
+    </task>
+    <task id="LOCAL-00001" summary="增加协议">
+      <created>1554874423918</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1554874423918</updated>
+    </task>
+    <task id="LOCAL-00002" summary="修改开源协议">
+      <created>1554874487333</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1554874487334</updated>
+    </task>
+    <task id="LOCAL-00003" summary="修改开源协议">
+      <created>1554875008176</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1554875008176</updated>
+    </task>
+    <task id="LOCAL-00004" summary="1. 增加Fragment&#10;2. 增加文件是否存在的判断">
+      <created>1554878008441</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1554878008441</updated>
+    </task>
+    <task id="LOCAL-00005" summary="增加rxjava的gradle依赖">
+      <created>1555057667829</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1555057667829</updated>
+    </task>
+    <task id="LOCAL-00006" summary="增加对Kotlin的支持">
+      <created>1555314011760</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1555314011760</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21588486" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32975295" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50053304" side_tool="true" weight="0.32939914" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32939914" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49946696" weight="0.3290461" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Maven Projects" order="7" />
+      <window_info anchor="right" id="Maven" order="8" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+    <MESSAGE value="增加协议" />
+    <MESSAGE value="修改开源协议" />
+    <MESSAGE value="1. 增加Fragment&#10;2. 增加文件是否存在的判断" />
+    <MESSAGE value="增加rxjava的gradle依赖" />
+    <MESSAGE value="增加对Kotlin的支持" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加对Kotlin的支持" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-api.jar!/com/intellij/psi/PsiNamedElement.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/java-api.jar!/com/intellij/psi/PsiMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/Groovy.jar!/org/jetbrains/plugins/groovy/lang/psi/api/statements/expressions/path/GrMethodCallExpression.class" />
+    <entry file="jar://$PROJECT_DIR$/libs/Groovy.jar!/org/jetbrains/plugins/groovy/lang/psi/impl/statements/expressions/path/GrMethodCallExpressionImpl.class" />
+    <entry file="jar://$PROJECT_DIR$/libs/Groovy.jar!/org/jetbrains/plugins/groovy/lang/psi/GroovyFile.class" />
+    <entry file="jar://$PROJECT_DIR$/libs/Groovy.jar!/org/jetbrains/plugins/groovy/lang/psi/GroovyFileBase.class" />
+    <entry file="jar://$PROJECT_DIR$/libs/Groovy.jar!/org/jetbrains/plugins/groovy/lang/psi/GroovyPsiElement.class" />
+    <entry file="jar://$PROJECT_DIR$/libs/Groovy.jar!/org/jetbrains/plugins/groovy/codeInspection/noReturnMethod/MissingReturnInspection.class" />
+    <entry file="jar://$PROJECT_DIR$/libs/Groovy.jar!/org/jetbrains/plugins/groovy/annotator/GroovyAnnotator30.class" />
+    <entry file="jar://$PROJECT_DIR$/libs/Groovy.jar!/org/jetbrains/plugins/groovy/annotator/GroovyAnnotator25.class" />
+    <entry file="jar://$PROJECT_DIR$/libs/Groovy.jar!/org/jetbrains/plugins/groovy/annotator/GroovyAnnotatorPre30.class" />
+    <entry file="jar://$PROJECT_DIR$/libs/Groovy.jar!/org/jetbrains/plugins/groovy/lang/psi/GroovyElementVisitor.class" />
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/util.jar!/com/intellij/openapi/util/UserDataHolder.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-api.jar!/com/intellij/openapi/util/Iconable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-api.jar!/com/intellij/psi/PsiElement.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="24" column="58" selection-start-line="24" selection-start-column="58" selection-end-line="24" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/Groovy.jar!/org/jetbrains/plugins/groovy/lang/psi/GroovyPsiElementFactory.class" />
+    <entry file="jar://$PROJECT_DIR$/libs/Groovy.jar!/org/jetbrains/plugins/groovy/lang/psi/impl/GroovyPsiElementFactoryImpl.class" />
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/resources.jar!/idea/LangActions.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="486" column="15" selection-start-line="486" selection-start-column="15" selection-end-line="486" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-api.jar!/com/intellij/openapi/project/Project.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/phoenix/plugin/AddDependencies.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/phoenix/plugin/bean/DialogParams.java" />
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-api.jar!/com/intellij/ide/util/PropertiesComponent.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="28" column="25" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/phoenix/plugin/Template/TemplateBaseView.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/phoenix/plugin/Template/TemplateBaseViewKt.txt" />
+    <entry file="file://$PROJECT_DIR$/src/com/phoenix/plugin/Template/TemplateBasePresenter.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/phoenix/plugin/Template/TemplateBasePresenterKt.txt" />
+    <entry file="file://$PROJECT_DIR$/src/com/phoenix/plugin/Template/TemplateBaseMVPActivity.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/phoenix/plugin/Template/TemplateBaseMVPActivityKt.txt" />
+    <entry file="file://$PROJECT_DIR$/src/com/phoenix/plugin/Template/TemplateBaseFragment.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" selection-start-line="14" selection-end-line="17" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/phoenix/plugin/Template/TemplateBaseMVPFragment.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="63" lean-forward="true" selection-start-line="13" selection-start-column="63" selection-end-line="13" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/phoenix/plugin/Template/TemplateBaseMVPFragmentKt.txt" />
+    <entry file="file://$PROJECT_DIR$/src/com/phoenix/plugin/Template/TemplateBean.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/phoenix/plugin/Template/TemplateBeanKt.txt" />
+    <entry file="file://$PROJECT_DIR$/src/com/phoenix/plugin/Template/TemplateDao.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/phoenix/plugin/Template/TemplateDaoKt.txt" />
+    <entry file="file://$PROJECT_DIR$/src/com/phoenix/plugin/Template/TemplateActivity.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/phoenix/plugin/Template/TemplateFragment.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/phoenix/plugin/Template/TemplateActivityKt.txt" />
+    <entry file="file://$PROJECT_DIR$/src/com/phoenix/plugin/Template/TemplateFragmentKt.txt" />
+    <entry file="file://$PROJECT_DIR$/src/com/phoenix/plugin/Template/TemplateContract.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/phoenix/plugin/Template/TemplateContractKt.txt" />
+    <entry file="file://$PROJECT_DIR$/src/com/phoenix/plugin/Template/TemplatePresenter.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/phoenix/plugin/Template/TemplatePresenterKt.txt" />
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_181/src.zip!/javax/swing/JComponent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="2677" column="16" selection-start-line="2677" selection-start-column="16" selection-end-line="2677" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/phoenix/plugin/Template/TemplateBaseActivityKt.txt" />
+    <entry file="file://$PROJECT_DIR$/src/com/phoenix/plugin/Template/TemplateBaseFragmentKt.txt" />
+    <entry file="file://$PROJECT_DIR$/resources/META-INF/plugin.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/phoenix/plugin/GeneratorDialog.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/phoenix/plugin/Template/TemplateBaseActivity.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/phoenix/plugin/GeneratorDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1207">
+          <caret line="78" column="45" selection-start-line="78" selection-start-column="45" selection-end-line="78" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/phoenix/plugin/MVPGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="31" column="40" lean-forward="true" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2453#2454#0" expanded="true" />
+            <element signature="e#2510#2511#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>IntelliJ IDEA Community Edition IC-191.6183.87</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>MVPGenerator</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

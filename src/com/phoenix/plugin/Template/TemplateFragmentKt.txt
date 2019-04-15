@@ -1,0 +1,26 @@
+package $packageName.views.fragments;
+
+import android.view.View;
+
+import $basePackageName.base.BaseMVPFragment;
+import $packageName.R;
+import $packageName.contracts.$nameContract;
+import $packageName.presenters.$namePresenter;
+
+/**
+ * @author $author
+ * @date $date
+ */
+class $nameFragment extends BaseMVPFragment<$namePresenter> implements $nameContract.View {
+    override fun initPresenter(): $namePresenter {
+        return $namePresenter(this)
+    }
+
+    override fun getContentId(): Int {
+        return R.layout.fragment_$name
+    }
+
+    override fun init() {
+
+    }
+}

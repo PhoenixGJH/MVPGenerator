@@ -1,5 +1,6 @@
 package com.phoenix.plugin;
 
+import com.phoenix.plugin.bean.DialogParams;
 import com.phoenix.plugin.utils.TextUtils;
 
 import javax.swing.*;
@@ -16,6 +17,7 @@ public class GeneratorDialog extends JDialog {
     private JCheckBox isFragmentCheckBox;
     private JCheckBox isGenerateBaseCheckBox;
     private JTextField textFieldBaseName;
+    private JCheckBox isKotlinCheckBox;
 
     private DialogCallback callback;
 
@@ -46,14 +48,22 @@ public class GeneratorDialog extends JDialog {
     private void initView() {
         buttonOK.addActionListener(e -> onOK());
         buttonCancel.addActionListener(e -> onCancel());
+        textFieldBaseName.setEnabled(false);
+        isGenerateBaseCheckBox.addChangeListener(e -> {
+            textFieldBaseName.setEnabled(isGenerateBaseCheckBox.isSelected());
+        });
     }
 
     private void onOK() {
         // add your code here
         if (callback != null) {
-            callback.onOk(textFieldAuthor.getText().trim(), textFieldClassName.getText().trim(),
-                    isFragmentCheckBox.isSelected(), isGenerateBaseCheckBox.isSelected(),
-                    textFieldBaseName.getText().trim());
+            DialogParams params = new DialogParams(textFieldAuthor.getText().trim(),
+                    textFieldClassName.getText().trim(),
+                    isFragmentCheckBox.isSelected(),
+                    isGenerateBaseCheckBox.isSelected(),
+                    textFieldBaseName.getText().trim(),
+                    isKotlinCheckBox.isSelected());
+            callback.onOk(params);
         }
         dispose();
     }
@@ -74,6 +84,6 @@ public class GeneratorDialog extends JDialog {
     }
 
     public interface DialogCallback {
-        void onOk(String author, String className, boolean isFragment, boolean isGenerateBase, String baseName);
+        void onOk(DialogParams params);
     }
 }
